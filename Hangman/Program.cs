@@ -8,7 +8,7 @@ namespace Section1CodeChallengesApp
         static void Main(string[] args)
         {
             var hangman = new TheGame();
-            var renderer = new GallowRenderer();
+            ///var renderer = new GallowRenderer();
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.SetCursorPosition(0, 0);
@@ -16,7 +16,7 @@ namespace Section1CodeChallengesApp
 
             while (!hangman.HasPlayerWon() && !hangman.IsPlayerHung())
             {
-                renderer.Render(5, 5, hangman.GetChancesLeft());
+               // renderer.Render(5, 5, hangman.GetChancesLeft());
 
                 Console.SetCursorPosition(0, 13);
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -32,7 +32,7 @@ namespace Section1CodeChallengesApp
                 hangman.GuessWord(nextGuess);
             }
 
-            renderer.Render(5, 5, hangman.GetChancesLeft());
+           // renderer.Render(5, 5, hangman.GetChancesLeft());
             Console.SetCursorPosition(0, 13);
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("Your current guess: ");
